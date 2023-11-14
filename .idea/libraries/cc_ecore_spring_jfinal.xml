@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="cc.ecore.spring.jfinal" type="repository">
+    <properties maven-id="cc.ecore:spring-jfinal:0.0.1" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/cc/ecore/spring-jfinal/0.0.1/spring-jfinal-0.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

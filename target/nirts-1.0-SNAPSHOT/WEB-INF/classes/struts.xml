@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+    <package name="basicstruts2"  namespace="/" extends="struts-default">
+        <interceptors>
+            <interceptor-stack name="appDefault">
+                <interceptor-ref name="defaultStack">
+                    <param name="exception.logEnabled">true</param>
+                    <param name="exception.logLevel">ERROR</param>
+                    <param name="params.excludeParams">dojo..*,^struts..*,^session..*,^request..*,^application..*,^servlet(Request|Response)..*,parameters...*</param>
+                </interceptor-ref>
+            </interceptor-stack>
+        </interceptors>
+        <action name="login" class="com.action.LoginUser">
+
+            <result name="success">/products.jsp</result>
+            <result name="input">/login.jsp</result>
+
+        </action>
+        <action name="register" class="com.action.RegisterUser">
+
+            <result name="success">/products.jsp</result>
+            <result name="input">/register.jsp</result>
+
+        </action>
+
+        <action name="contact" class="com.action.contactus">
+            <result name="success">/contact.jsp</result>
+            <result name="input">/contact.jsp</result>
+        </action>
+        <action name="con" class="com.action.contact">
+            <result name="success">/contactclient.jsp</result>
+            <result name="input">/contactclient.jsp</result>
+        </action>
+        <action name="commande" class="com.action.CommandeAction">
+            <result name="success">/shop.jsp</result>
+            <result name="input">/commande.jsp</result>
+        </action>
+        <action name="logout" class="com.action.LogoutAction">
+
+            <result name="redirect" type="redirect">/login.jsp</result>
+
+        </action>
+        <action name="downloadPDF" class="com.action.DownloadPDFAction">
+            <result name="success" type="stream">
+                <param name="contentType">application/pdf</param>
+                <param name="inputName">inputStream</param>
+                <param name="contentDisposition">attachment;filename="product_${codeCmd}.pdf"</param>
+                <param name="bufferSize">1024</param>
+            </result>
+        </action>
+        <action name="deleteArticle" class="com.action.DeleteArticleAction">
+            <result name="success">shop.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+        <action name="updatemdps" class="com.action.UpdatePassword">
+            <result name="success">modifiermdps.jsp</result>
+            <result name="input">/modifiermdps.jsp</result>
+            <result name="error">/modifiermdps.jsp</result>
+        </action>
+    </package>
+
+</struts>

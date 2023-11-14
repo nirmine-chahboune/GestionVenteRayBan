@@ -1,0 +1,213 @@
+body {
+    font-family: Arial;
+    color: #b7dbff;
+    background: url('https://coolbackgrounds.io/images/backgrounds/white/pure-white-background-85a2a7fd.jpg');
+    background-position: center;
+}
+
+.loginform,
+.registerform {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    margin-left: -200px; /* Adjusted to center the form */
+    border: none;
+    border-radius: 10px;
+    top: 100px;
+    line-height: 5px;
+    text-align: center;
+    background-color: #12CBC4;
+    -webkit-box-shadow: 0px 0px 36px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 36px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 36px 1px rgba(0, 0, 0, 0.75);
+}
+
+.loginform {
+    z-index: 1;
+
+
+}
+
+.registerform-active {
+    z-index: 2;
+    background-color: #fff9f9;
+}
+
+.loginform input,
+.registerform input {
+    background-color: #81fcf5;
+    color: white;
+}
+
+.registerform input::placeholder {
+    color: #595656; /* Set the color of the input placeholder */
+}
+
+.loginform .submit,
+.registerform .submit {
+    background-color: #81fcf5;
+    color: #fff9f9;
+    position: relative;
+    top: 120px;
+}
+
+.whitetop {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    box-shadow: none;
+    background: white;
+    border-radius: 10px 10px 0px 0px;
+}
+
+h3 {
+    font-family: Verdana;
+    position: relative;
+    top: 5px;
+}
+
+.mail,
+.pass {
+    position: relative;
+    top: 110px;
+    height: 25px;
+    width: 200px;
+    margin: 10px;
+    border: none;
+    background-color: #81fcf5;
+    border: none;
+    border-bottom: 2px solid white;
+    transition: all 0.5s;
+}
+
+.mail:focus,
+.pass:focus {
+    outline: none;
+    border-bottom: 2px solid #12CBC4;
+    width: 250px;
+}
+
+.submit {
+    position: relative;
+    top: 160px;
+    width: 160px;
+    height: 30px;
+    border: none;
+    background-color: white;
+    color: #f82727;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+
+.submit:hover {
+    background-color: #e10f0f;
+    color: white;
+    border-radius: 10px;
+}
+
+.login,
+.register {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    height: 40px;
+    width: 400px; /* Adjusted to match the form width */
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.message {
+    position: absolute;
+    bottom: 15px;
+    left: 40%;
+    transform: translateX(-50%);
+    color: #ffffff;
+}
+
+a {
+    color: #426dfa;
+}
+
+.mail::placeholder,
+.pass::placeholder {
+    font-size: 15px; /* Set the font size of the placeholders */
+}
+.header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #fff;
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 9%;
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bolder;
+    margin-right: auto;
+}
+
+.header .navbar ul {
+    list-style: none;
+}
+
+.header .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.header .navbar ul li:hover ul {
+    display: block;
+}
+
+.header .navbar ul li a {
+    font-size: 1.7rem;
+    color: #666;
+    padding: 2rem;
+    display: block;
+}
+
+.header .navbar ul li a:hover {
+    background: #eee;
+}
+
+.header .navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 20rem;
+    background: #fff;
+    display: none;
+}
+
+.header .navbar ul li ul li {
+    width: 100%;
+}
+
+.header .icons div,
+.header .icons a {
+    font-size: 2.5rem;
+    color: #333;
+    cursor: pointer;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover,
+.header .icons a:hover {
+    color: #12CBC4;
+}
